@@ -1,12 +1,11 @@
 :root {
-  --air-superiority-blue: #74a4c9ff;
+  --light-blue: #74a4c9ff;
   --headerBg: #035489ff;
-  --footerTextColor: rgb(200, 204, 211);
-  --star-command-blue: #137bb0ff;
-  --blue-sapphire: #2b6584ff;
+  --TextColor: rgb(200, 204, 211);
+  --dark-blue: #2b6584ff;
   --footerBg: #312c23ff;
 }
-
+/* General Styling */
 * {
   scroll-behavior: smooth;
   margin: 0;
@@ -21,7 +20,7 @@ a {
   text-decoration: none;
   font-style: italic;
   font-weight: bold;
-  color: var(--footerTextColor);
+  color: var(--TextColor);
 }
 header {
   padding: 0.5em;
@@ -40,6 +39,15 @@ header {
   color: white;
   font-size: 1.4em;
 }
+section {
+  min-height: 100vh;
+}
+
+/* 
+
+    Header And Navigation Styles 
+
+*/
 .logo {
   margin-left: 1em;
   cursor: pointer;
@@ -70,9 +78,19 @@ header {
   font-weight: bold;
   cursor: pointer;
 }
-section {
-  min-height: 100vh;
+.hamburger-nav span {
+  display: none;
+  width: 30px;
+  margin: 7px;
+  border-bottom: 2px solid white;
+  cursor: pointer;
 }
+
+/* 
+
+    Home Section Styles 
+
+*/
 .home {
   display: flex;
   align-items: center;
@@ -119,6 +137,11 @@ section {
   transform: scale(1.05);
 }
 
+/* 
+
+    Services Section Styles 
+
+*/
 .services {
   background-color: rgba(236, 234, 234, 0.884);
   padding-bottom: 5%;
@@ -166,10 +189,10 @@ section {
   justify-content: center;
   padding: 0 1.5em;
 }
+.apartment-desc:last-child {
+  align-self: flex-end;
+}
 .apartment-desc a {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
   text-decoration: none;
   color: white;
   background-color: var(--headerBg);
@@ -219,6 +242,11 @@ section {
   transform: scale(1.1);
 }
 
+/* 
+
+    Reviews Section Styles 
+
+*/
 .review-desc {
   margin: 5% auto;
   font-size: 1.5em;
@@ -252,7 +280,8 @@ section {
 .review-card::after {
   position: absolute;
   top: -3em;
-  left: 10em;
+  left: 50%;
+  transform: translate(-50%);
 
   content: "";
   width: 6em;
@@ -283,6 +312,11 @@ section {
 .review-score {
   color: gold;
 }
+/* 
+
+    About Us Section Styles 
+
+*/
 .about {
   background: rgb(19, 123, 176);
   background: radial-gradient(
@@ -336,6 +370,11 @@ section {
   font-weight: bold;
   color: #1f1f1f;
 }
+/* 
+
+    Contact Us Section Styles 
+
+*/
 .Contact {
   background-color: var(--gradient-left);
 }
@@ -368,7 +407,7 @@ legend {
 textarea {
   width: 90%;
   padding: 0.5em;
-  border: 1px solid var(--air-superiority-blue);
+  border: 1px solid var(--light-blue);
   border-radius: 3px;
   margin: 0.5em 0;
   resize: none;
@@ -389,7 +428,7 @@ textarea {
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-  color: var(--blue-sapphire);
+  color: var(--dark-blue);
 }
 .social-media {
   font-size: 1.4em;
@@ -420,14 +459,15 @@ textarea {
   font-weight: bold;
   text-align: left;
 }
+/* Footer styling */
 footer {
   background: var(--footerBg);
   text-align: center;
-  color: var(--footerTextColor);
+  color: var(--TextColor);
   padding: 1em;
 }
 
-/* Animation for review Cards and Apartments */
+/* review Cards Animation */
 @keyframes wipe-enter {
   0% {
     transform: scale(0, 0.025);
@@ -437,6 +477,7 @@ footer {
   }
 }
 
+/*  Apartments Animation  */
 @keyframes fade {
   0% {
     opacity: 0.5;

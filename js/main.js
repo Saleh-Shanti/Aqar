@@ -1,3 +1,5 @@
+
+// For Animation To Reviews Cards And Apartmens Cards
 const cards = document.querySelectorAll(".review-card");
 const apartmentCards = document.querySelectorAll(".apartment")
 

@@ -1,0 +1,62 @@
+@media screen and (max-width: 900px) {
+  body {
+    font-size: 14px;
+  }
+  .contact-info {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .nav-list {
+    display: none;
+  }
+  .hamburger-nav span {
+    display: block;
+  }
+  .apartment-desc a {
+    margin-bottom: 0.5em;
+  }
+  .apartment-img::after {
+    padding: 0.5em;
+    bottom: 5px;
+  }
+  .Reviews-container {
+    flex-direction: column;
+  }
+  .review-card {
+    width: 50%;
+    margin: 2em auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .home {
+    justify-content: center;
+  }
+  .home-description {
+    width: auto;
+  }
+  .apartment {
+    flex-direction: column-reverse;
+  }
+  .about .container {
+    align-items: center;
+    flex-direction: column;
+  }
+  .about-sidebar {
+    margin-bottom: 1em;
+  }
+  fieldset,
+  .contact-info {
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+  .Contact .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-form {
+    width: 100%;
+    margin: 1em auto;
+  }
+}
