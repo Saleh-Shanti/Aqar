@@ -139,11 +139,20 @@ section {
   align-items: center;
 }
 .apartment {
+  visibility: hidden;
+  opacity: 0;
   display: flex;
   overflow: hidden;
   border-radius: 20px;
   background-color: #fcfcfc;
   margin: 1em 0;
+  transition: 1s ease-in-out;
+  animation: fade;
+}
+.apartment-animation,
+.home-animation {
+  opacity: 1;
+  visibility: visible;
 }
 .reverse {
   flex-direction: row-reverse;
@@ -223,6 +232,7 @@ section {
   align-items: center;
 }
 .review-card {
+  visibility: hidden;
   position: relative;
   width: 25%;
   margin: auto;
@@ -233,6 +243,11 @@ section {
   box-shadow: 2px 1px 43px -13px rgba(97, 97, 97, 1);
   -webkit-box-shadow: 2px 1px 43px -13px rgba(97, 97, 97, 1);
   -moz-box-shadow: 2px 1px 43px -13px rgba(97, 97, 97, 1);
+}
+.review-animation {
+  visibility: visible;
+  animation-name: wipe-enter;
+  animation-duration: 1s;
 }
 .review-card::after {
   position: absolute;
@@ -256,7 +271,7 @@ section {
   background-size: cover;
 }
 .review-card:nth-child(3)::after {
-  background: url("../Images/avatar\ \(1\).webp") no-repeat;
+  background: url("../Images/avatar\ \(3\).webp") no-repeat;
   background-size: cover;
 }
 .client-name {
@@ -410,4 +425,26 @@ footer {
   text-align: center;
   color: var(--footerTextColor);
   padding: 1em;
+}
+
+/* Animation for review Cards and Apartments */
+@keyframes wipe-enter {
+  0% {
+    transform: scale(0, 0.025);
+  }
+  50% {
+    transform: scale(0.8, 0.025);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: ز5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
