@@ -4,9 +4,13 @@ Simple Landing Page for Real Estate Company with some animation
 
 ### Screenshot
 
-![](./Images/screenshot.png)
+- Desktop Preview
+  ![](./Images/screenshot.png)
 
 - Live Site URL: (https://saleh-shanti.github.io/Aqar/)
+
+- Mobile Preview
+  ![](./Images/Phone-preview.png)
 
 ### Built with
 
